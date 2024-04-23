@@ -1,0 +1,321 @@
+
+/* General Resets */
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+    /* Body Styling */
+    body {
+        background-color: #f6f7ec;
+        margin: 0;
+        padding: 0;
+    }
+    .hero-image{
+        background-image: url("/assets/simon-berger-twukN12EN7c-unsplash.jpg");
+    }
+    
+    .hero-image {
+        height: 25vh; /* Changed to viewport height */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        position: relative;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+        flex-direction: column; /* Stack children elements vertically */
+        justify-content: center; /* Center children vertically */
+        align-items: center; /* Center children horizontally */
+        padding: 20px; /* Add some padding to ensure content has space */
+
+        
+    }
+    
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+    }
+
+    .hero-text h1{
+     color:#f6f7ec;
+    }
+    
+    /* Sidebar Navigation */
+    
+    .navigation {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100px;
+        background-color: #f6f7ec;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; /* Centers items horizontally */
+        padding-top: 20px;
+        padding-bottom: 20px;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    }
+    
+    .dashboard .navigation .google-icon {
+        text-decoration: none; /* Removes underline from links */
+        
+        margin-left: 5px;
+        
+    }
+
+    .navigation img.logo, .navigation img.user {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin: 0 auto; /* Center align */
+    }
+    
+    .navigation .google-icon .material-symbols-outlined {
+        display: block;
+        margin-left: 5px; /* To center the icons correctly */
+        margin: 10px auto; /* Center align and add some space */
+        color: #8f5d46;
+        font-size: 30px;
+    }
+    
+    /* Hover state of the icon 
+    .navigation .google-icon:hover .material-symbols-outlined {
+        transform: scale(1.2);
+        color: #8f5d46;
+        
+    } 
+*/
+    /* Normal state of the icon */
+ .navigation .google-icon .material-symbols-outlined {
+    color: #8f5d46; /* Original color */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.2); /* Subtle shadow for a 3D effect */
+}
+
+/* Hover state of the icon */
+.dashboard .navigation .google-icon:hover .material-symbols-outlined {
+    color: #8f5d46; /* You can choose a complementary color or keep the same */
+    transform: scale(1.2) translateY(-5px); /* Makes the icon larger and slightly raised */
+    text-shadow: 0px 5px 10px rgba(0,0,0,0.4); /* More pronounced shadow for a 3D effect */
+}
+
+
+
+
+    
+    
+
+
+.hero-text {
+
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    
+}
+
+.hero-text span{
+    color:black;
+}
+
+/* Search Container */ 
+.search-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #8f5d46;
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+
+/* Search Input */
+
+.search-container form{
+    display: flex;
+    top:20px;
+   
+    
+}
+#search {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    margin-right: 10px; /* Space between input field and search icon */
+    border-radius: 20px; /* Rounded edges */
+    flex-grow: 1; /* Ensures the input field uses available space */
+    
+}
+
+/* Search Icon within the form */
+.search-icon {
+position:relative;
+    background: none;
+    border: none;
+    color: #8f5d46; /* Icon color */
+    cursor: pointer;
+    font-size: 24px; /* Icon size */
+}
+
+
+ .search-container form input{
+     width:100%;
+     font-size: 16px;
+     padding: 10px 10px 10px 60px;
+     border:1px solid #8f5d46;
+     background-color: rgba(0 0 0 /0); 
+     padding-top: 20px; 
+     
+}
+
+/*--blog--------------------------*/
+#blog {
+    margin-left: 100px; /* Push content to the right */
+    margin-right: 100px; /* Added to center the blog section */
+    max-width: 1200px; /* You can adjust this value to set the maximum width of the blog section */
+    margin: auto; /* This will center the blog section */
+    padding: 20px;
+    box-sizing: border-box; 
+    transition: margin-left 0.5s; /* Smooth transition */
+   
+}
+.back-icon{
+    position:absolute;
+    top:20px;
+    left:130px;
+    color:#f6f7ec;
+    cursor: pointer;
+    transition: transform 0.3s ease , color 0.3s ease;
+}
+.back-icon span{
+    font-size:30px;
+}
+.back-icon:hover{
+    transform:scale(1.7);
+    color: black;
+}
+.blog-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.blog-heading span{
+    color: white;
+
+    ;
+}
+.blog-heading h3{
+    font-size: 2.4rem;
+    color: orange;
+    font-weight: 600;
+}
+.blog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+ 
+.blog-box {
+    width: 280px; /* Set a fixed width for each blog box */
+    height: auto; /* Set a fixed height for each blog box */
+    background-color: white;
+    box-shadow: 1px 1px 40px rgba(0, 0, 0 / 0.1);
+    border: 1px solid #ececec;
+    margin: 20px; /* Adjust the margin as needed */
+    overflow: hidden; /* This will ensure the content does not overflow the set height */
+    display: flex;
+    flex-direction: column; /* Stack children elements (image and text) vertically */
+    transition: all 0.3s ease;
+}
+
+
+.blog-box:hover {
+    transform: translateY(-5px); /* Slightly scales up the box */
+    box-shadow: 1px 1px 40px rgba(0,0,0,0.2);
+}
+    
+ 
+
+.blog-img{
+    width:100%;
+    height: 50%;
+}
+.blog-img img{
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.blog-text{
+    padding: 15px;
+    flex-grow:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.blog-text span{
+    color:black;
+    font-size: 0.9rem;
+}
+.blog-text .blog-title{
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #8f5d46;
+}
+.blog-text p{
+    flex-grow:1;
+    color:black;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+.blog-text a{
+    align-self: start;
+    margin:10px;
+    color: #bfab94;
+}
+.blog-text a:hover{
+    color: orange;
+    transition: all ease 0.3s;
+}
+ 
+ 
+@media(max-width:1250px){
+ 
+    .blog-box{
+        width: 300px;
+    }
+} 
+@media(max-width:1100px){
+    .blog-box{
+        width:70%;
+    }
+}
+ 
+@media(max-width:550px){
+   
+    .blog-box{
+        margin: 20px 10px;
+        width: 100%;
+    }
+    #blog{
+        padding:20px;
+    }
+}

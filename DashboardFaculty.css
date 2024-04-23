@@ -1,0 +1,464 @@
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    margin: 0ppx;
+    background-color:#f6f7ec;
+}
+
+.dashboard {
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+
+/* ================================== 
+              Navigation
+====================================== */
+
+.dashboard .navigation {
+
+    display: flex;
+    justify-self: space-between;
+    width: 100%;
+    margin-top: 10px;
+   
+}
+
+.dashboard .navigation img.logo {
+    width: 45px;
+    height:45px;
+    border-radius: 5px;
+}
+
+.dashboard .navigation img.user{
+    width: 50px;
+    height:50px;
+    border-radius: 10px;
+}
+
+.dashboard .navigation div .material-symbols-outlined{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 30px;
+    color:#8f5d46;
+}
+
+.dashboard .navigation .google-icon {
+   text-decoration: none; /* Removes underline from links */
+}
+
+/* Normal state of the icon */
+.dashboard .navigation .google-icon .material-symbols-outlined {
+   color: #8f5d46; /* Original color */
+   transition: all 0.3s ease; /* Smooth transition for all changes */
+   text-shadow: 0px 0px 5px rgba(0,0,0,0.2); /* Subtle shadow for a 3D effect */
+}
+
+/* Hover state of the icon */
+.dashboard .navigation .google-icon:hover .material-symbols-outlined {
+   color: #8f5d46; /* You can choose a complementary color or keep the same */
+   transform: scale(1.2) translateY(-5px); /* Makes the icon larger and slightly raised */
+   text-shadow: 0px 5px 10px rgba(0,0,0,0.4); /* More pronounced shadow for a 3D effect */
+}
+
+
+
+
+/* ================================== 
+              Main Dashboard
+====================================== */
+/* Header */
+.dashboard .main .header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+}
+.dashboard .main .header h1 {
+   font-size: 24px;
+   margin: 0;
+}
+
+.dashboard .main .header .header-actions {
+   display: flex;
+   align-items: center;
+}
+
+.dashboard .main .header .add-class-btn {
+   display: flex;
+   align-items: center;
+   padding: 10px 20px;
+   background-color: #8f5d46;
+   color: #fff;
+   border: none;
+   border-radius: 4px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.dashboard .main .header .add-class-btn:hover {
+   background-color: #7a4c3a;
+}
+
+.dashboard .main .header .add-class-btn .material-symbols-outlined {
+   margin-right: 5px;
+}
+
+.dashboard .main .header .notification,
+.dashboard .main .header .brightness {
+   margin-left: 20px;
+   cursor: pointer;
+}
+
+
+
+
+/* Search */
+
+.dashboard .main .search form {
+    position: relative;
+
+}
+.dashboard .main .search{
+    margin-top: 40px;
+}
+
+.dashboard .main .search form input{
+    width:100%;
+    font-size: 16px;
+    padding: 10px 10px 10px 60px;
+    border:1px solid #8f5d46;
+    background-color: rgba(0 0 0 /0);    
+}
+
+.dashboard .main .search form span{
+    position:absolute;
+    left:15px;
+    top:10px; color: #8f5d46;
+}
+
+.dashboard .main .search .notification{
+    margin-top: 20px;
+
+}
+
+.dashboard .main .search .notification span:nth-child(1){
+    margin-right: 15px;
+    position:relative;
+}
+
+.dashboard .main .search .notification span:nth-child(1)::before{
+    content:'';
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    background-color: #8f5d46;
+}
+
+.dashboard .main .search .notification #addClass {
+   color: #8f5d46;
+   cursor: pointer;
+   transition: transform 0.3s ease;
+ }
+ 
+ .dashboard .main .search .notification #addClass.rotate {
+   transform: rotate(45deg);
+ }
+
+ 
+
+
+/* My Classes */
+
+.dashboard .main .title {
+    margin-bottom: 30px;
+}
+
+.dashboard .main .title  h1{
+    font-size: 35px;
+    line-height: 0px;   
+}
+
+.dashboard .main .title  {
+    margin-top:40px;
+}
+
+.dashboard .main .title label{
+    margin-right:15px;
+    color:#8f5d46;
+    font-size: 16px;
+}
+
+.dashboard .main .title select{
+    border: none;
+    font-size: 16px;
+    background-color: rgba(0 0 0 /0);
+}
+
+/*  Classes */
+
+.dashboard .main .class_list .class h2 {
+    font-size: 20px;
+    font-weight: 0;
+}
+
+.dashboard .main .class_list .class p{
+    color:black;
+}
+
+.dashboard .main .class_list .class ul {
+    list-style: none;
+    position: relative;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.dashboard .main .class_list .class ul li{
+    position: relative;
+    color: #727272;
+    margin-left: 15px;
+}
+
+
+
+.dashboard .main .class_list .class ul li::before {
+    content : "\268A";
+    position : absolute;
+    left: -15px;
+    top: -5px;
+}
+
+
+.dashboard .main .class_list .class .meta img {
+    width:50px;
+    height:50px;
+    border-radius: 40px;
+    border: 4px solid #f6f7ec;
+}
+
+.dashboard .main .class_list .class .meta img .stack {
+   margin-left: -20px;
+}
+
+
+.dashboard .main .class_list .class .meta {
+    display:flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.dashboard .main .class_list .class   {
+   padding: 20px 20px 20px 60px;
+   background-color: #DDCAB2;
+   box-shadow:1px 1px 40px rgba( 0 0 0 / 0.1);
+   margin-bottom: 20px;
+   border-radius: 10px;
+   position:relative;
+}
+
+.dashboard .main .class_list .category {
+    width: 30px;
+    height: 50px;
+    border-radius: 0px 10px 10px 0px;
+    position: absolute;
+    left:0;
+}
+
+.interactive-background {
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   cursor: pointer; /* Optional: changes the mouse cursor on hover */
+ }
+ 
+ .interactive-background:hover {
+   transform: scale(1.03); /* Slightly scales up the class item */
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+ }
+ 
+
+.category_color1{
+    background-color: olive !important;
+}
+
+.category_color2{
+    background-color: orange !important;
+}
+
+.category_color3{
+    background-color: tan !important;
+}
+
+.category_color4{
+    background-color: lightblue !important;
+}
+
+.category_color5{
+    background-color: gold !important;
+}
+
+.category_color6{
+    background-color: pink!important;
+}
+
+/* ================================== 
+         Secondary Statics 
+====================================== */
+/* Chart */
+.dashboard .secondary .chart .complete {
+   text-align: center;
+   margin: 40px 0px;
+}
+
+.dashboard .secondary .chart .complete h3 {
+   line-height: 0px; /* Consider adjusting line-height to more than 0px for visibility */
+}
+
+.dashboard .secondary .chart .complete p {
+   color: #727272;
+}
+
+.dashboard .secondary .chart {
+   background-color: #f6f7ec;
+   padding: 15px;
+   position: relative;
+   margin-bottom: 30px;
+}
+
+/* Recent Projects */
+.dashboard .secondary .recent_project {
+   background-color: #f6f7ec;
+   padding: 15px 15px 15px 60px;
+   position: relative;
+   margin-bottom: 30px;
+   max-height: 300px; /* Use max-height for flexible container height */
+   overflow-y: auto; /* Use 'auto' to show scrollbar only when needed */
+}
+
+.dashboard .secondary .recent_project .listing {
+   display: flex;
+   justify-content: space-between;
+}
+
+.dashboard .secondary .recent_project .listing h2 {
+   line-height: 1.5; /* Adjusted from 0px for better readability */
+}
+
+.dashboard .secondary .recent_project .listing p {
+   color: #727272;
+}
+
+.dashboard .secondary .recent_project .category {
+   width: 16px;
+   height: 16px;
+   border-radius: 16px;
+   position: absolute;
+   left: 10px;
+   top: 20px; /* Changed from margin-top to top for better control */
+}
+
+
+
+/* ==========================
+Media Query 768xp 
+============================= */
+@media only screen and (min-width: 768px){
+    /* Dashboard Search */
+    .dashboard .main .search{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+    .dashboard .main .search form{
+        margin-top: 10px;
+    }
+    section.main .project_list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    section.main .project_list .project{
+        width: 47%;
+    }
+    section.main .project_list .project span{
+        margin-top: 15px;
+    }
+
+    /* Recent Projects */
+    section.secondary{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        background-color: #f6f7ec;
+        padding-top: 70px;
+    }
+    section.secondary .chart{
+        width: 40%;
+    }
+    section.secondary .recent_project{
+        width: 55%;
+    }
+    section.secondary .recent_project .listing span{
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .dashboard .navigation,
+    .dashboard .navigation div span,
+    section.secondary{
+        display: block;
+    }
+    .dashboard .navigation{
+        width: 60px;
+        position: fixed;
+        z-index: 10;
+    }
+    section.main{
+        width: 60%;
+        margin-left: 90px;
+        margin-right: 20px;
+    }
+    section.secondary{
+        width: 27%;
+        padding-top: 0px;
+        position: fixed;
+        top: 20px;
+        right: 0px;
+        background-color: transparent;
+    }
+    section.secondary .chart,
+    section.secondary .recent_project{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .dashboard .navigation div{
+        margin-top: 19vh;
+        margin-bottom: 19vh;
+    }
+    .dashboard .navigation div span{
+        margin-top: 5vh;
+    }
+}
+
+@media only screen and (min-width: 1111px){
+    section.main .project_list .project{
+        width: 32%;
+    }
+    section.main{
+        width: 65%;
+    }
+}
+@media only screen and (min-width: 1500px){
+    section.secondary .recent_project .listing:nth-child(4){
+        display: none;
+    }
+} 
+
+ 
